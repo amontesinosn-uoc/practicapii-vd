@@ -3,7 +3,7 @@ from app_dashboard import fig1, fig2, fig3, fig4, fig5, fig6
 
 def fig_html(fig):
     fig.update_layout(
-        height=300,
+        height=270,
         width=450,
         autosize=False,
         margin=dict(l=40, r=20, t=45, b=40)
