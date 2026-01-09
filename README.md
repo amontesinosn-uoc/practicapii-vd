@@ -1,6 +1,6 @@
 # Spatial Analysis of Energy Communities and Vulnerability in Spain
 
-Dashboard interactivo realizado en Python usando las librerías Dash y Plotly realizado para la parte II de la práctica **Visualización de Datos** perteneciente al **Máster en Ciencia de Datos** de la **UOC**.
+Dashboard interactivo realizado en Python (3.13) usando las librerías Dash y Plotly realizado para la parte II de la práctica **Visualización de Datos** perteneciente al **Máster en Ciencia de Datos** de la **UOC**.
 
 Este repositorio contiene el código fuente de un **dashboard interactivo** que permite analizar la relación entre la presencia de **Comunidades Energéticas (CAI)**, la **vulnerabilidad social** y diversas **variables socioeconómicas y territoriales** de los municipios en España.
 
@@ -56,15 +56,19 @@ El dashboard incluye los siguientes elementos visuales:
 
 ## Estructura del proyecto
 
-├── src/
-│ ├── app_dashboard.py
-│ ├── export_dashboard.py
-│ ├── index.html
-│ ├── LICENSE
-│ ├── README.md
-│ └── requirements.txt
+    src/
+        app_dashboard.py
+        export_dashboard.py
+        index.html
+        LICENSE
+        README.md
+        requirements.txt
 
 ---
+
+## Ejecución en servidor local
+
+Para la ejecución en un servidor local basta con clonar el repositorio, descargar las librerías necesarias del fichero requirements.txt y ejecutar el siguiente comando desde una terminal situada en la carpeta del proyecto: python app_dashboard.py. Para ver la app acceder a http://127.0.0.1:8050/.
 
 ## Fuente de datos
 
