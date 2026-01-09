@@ -2,6 +2,8 @@
 
 Dashboard interactivo realizado en Python (3.13) usando las librerías Dash y Plotly realizado para la parte II de la práctica **Visualización de Datos** perteneciente al **Máster en Ciencia de Datos** de la **UOC**.
 
+El dashboard está alojada en esta URL de GitHub pages: https://amontesinosn-uoc.github.io/practicapii-vd/
+
 Este repositorio contiene el código fuente de un **dashboard interactivo** que permite analizar la relación entre la presencia de **Comunidades Energéticas (CAI)**, la **vulnerabilidad social** y diversas **variables socioeconómicas y territoriales** de los municipios en España.
 
 El dashboard acompaña el trabajo académico:
