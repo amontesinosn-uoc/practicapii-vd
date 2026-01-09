@@ -56,13 +56,21 @@ El dashboard incluye los siguientes elementos visuales:
 
 ---
 
+## Decisiones de diseño a comentar
+
+Se ha utilizado Dash y Plotly ya que son el tándem perfecto para crear visualizaciones de datos web en Python. Dash permite crear aplicaciones web dinámicas, las cuales contienen elementos de visualizaciónes de datos (como son las gráficas de Plotly). El resultado es un dashboard que pese a mostrar miles de elementos en las gráficas de manera simultánea, es bastante ágil y fluido, manteniendo al mismo tiempo la interactividad de los gráficos que Plotly proporciona en otros medios como podría ser un notebook de Jupyter.
+
+Dado que el dashboard se concibió para ser publicado en GitHub pages y éste utiliza un único fichero HTML, el script de la aplicación contiene todos los datos necesarios embebidos, lo cual resalta la idoneidad de las tecnologías escogidas al ser la navegación tan rápida.
+
+---
+
 ## Estructura del proyecto
 
     src/
-        app_dashboard.py
-        export_dashboard.py
-        index.html
-        LICENSE
+        app_dashboard.py (Script Python con el dashboard)
+        export_dashboard.py (Script Python para generar el html compatible con GitHub Pages)
+        index.html (HTML que muestra GitHub Pages)
+        LICENSE 
         README.md
         requirements.txt
 
