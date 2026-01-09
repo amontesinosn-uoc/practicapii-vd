@@ -48,27 +48,6 @@ ccaa_cais = pd.DataFrame({
     "num_cais": [31, 9, 4, 7, 8, 2, 5, 16, 54, 54, 0, 9, 10, 3, 14, 20, 4]
 })
 
-# -------- MUNICIPIOS --------
-n_total = 8100
-n_cai = 250
-
-df = pd.DataFrame({
-    "Has_CAI": [1]*n_cai + [0]*(n_total - n_cai),
-    "SVI": np.concatenate([
-        np.random.normal(-0.2, 0.4, n_cai),
-        np.random.normal(0.2, 0.5, n_total - n_cai)
-    ]),
-    "Income_level": np.random.choice(
-        ["Low", "Medium", "High", "Very High"],
-        n_total,
-        p=[0.35, 0.35, 0.2, 0.1]
-    ),
-    "Energy_profile": np.random.choice(
-        ["Solar", "Wind", "Hydro", "Biomass"],
-        n_total
-    )
-})
-
 # ======================================================
 # FIGURA 1 – MAPA CCAA (CHOROPLETH – MAPLIBRE)
 # ======================================================
@@ -8271,7 +8250,7 @@ fig2.update_layout(
     yaxis_title="Ingresos medios (€)"
 )
 # ======================================================
-# FIGURA 3 – % MUNICIPIOS CON / SIN CAI
+# FIGURA 3 – % MUNICIPIOS CON CAI
 # ======================================================
 
 
@@ -16461,7 +16440,6 @@ fig4 = px.scatter(
     title="Índices sociales por municipio"
 )
 
-# --- Estilo diferencial ---
 fig4.update_traces(
     marker=dict(opacity=0.3),
     selector=dict(name="Sin CAI")
@@ -16539,7 +16517,7 @@ fig6.update_layout(
 )
 
 # ======================================================
-# DASHBOARD LAYOUT (FULL SCREEN)
+# DASHBOARD LAYOUT
 # ======================================================
 
 app = dash.Dash(__name__)
@@ -16597,11 +16575,11 @@ app.layout = html.Div(
             children=[
                 dcc.Graph(figure=fig1),
                 dcc.Graph(figure=fig2),
-                dcc.Graph(figure=fig3),  # KPI con CAI
+                dcc.Graph(figure=fig3),
 
                 dcc.Graph(figure=fig4),
                 dcc.Graph(figure=fig5),
-                dcc.Graph(figure=fig6)   # KPI sin CAI
+                dcc.Graph(figure=fig6)
             ]
         )
     ]
