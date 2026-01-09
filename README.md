@@ -51,6 +51,12 @@ El dashboard incluye los siguientes elementos visuales:
 
 ## Tecnologías utilizadas
 
+### Pretratamiento de los datos
+
+- R
+
+### Dashboard
+
 - Dash
 - Plotly
 
@@ -67,12 +73,13 @@ Dado que el dashboard se concibió para ser publicado en GitHub pages y éste ut
 ## Estructura del proyecto
 
     src/
-        app_dashboard.py (Script Python con el dashboard)
-        export_dashboard.py (Script Python para generar el html compatible con GitHub Pages)
-        index.html (HTML que muestra GitHub Pages)
-        LICENSE 
-        README.md
-        requirements.txt
+        app_dashboard.py -> (Script Python con el dashboard)
+        dataset_pii_amontesinosn_final.csv -> (Dataset tratado en R utilizado como fuente de datos para el dasboard)
+        export_dashboard.py -> (Script Python para generar el html compatible con GitHub Pages)
+        index.html -> (HTML que muestra GitHub Pages)
+        LICENSE -> (Licencia MIT)
+        README.md -> (Este documento)
+        requirements.txt -> (Librerías necesarias para ejecución local)
 
 ---
 
