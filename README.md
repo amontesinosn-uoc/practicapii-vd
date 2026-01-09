@@ -1,77 +1,85 @@
 # Spatial Analysis of Energy Communities and Vulnerability in Spain
 
-Interactive dashboard exploring the relationship between **energy communities (CAIs)**,
-**socioeconomic vulnerability**, **energy profiles** and **territorial characteristics**
-across Spanish municipalities.
+Dashboard interactivo realizado en Python usando las librerías Dash y Plotly realizado para la parte II de la práctica **Visualización de Datos** perteneciente al **Máster en Ciencia de Datos** de la **UOC**.
 
-This project has been developed as part of the course **Visualización de Datos** and
-focuses on understanding **in which socioeconomic and territorial contexts CAIs emerge**,
-considering that they are a **rare phenomenon** (present in only a small fraction of municipalities).
+Este repositorio contiene el código fuente de un **dashboard interactivo** que permite analizar la relación entre la presencia de **Comunidades Energéticas (CAI)**, la **vulnerabilidad social** y diversas **variables socioeconómicas y territoriales** de los municipios en España.
 
----
+El dashboard acompaña el trabajo académico:
 
-## 🔍 Project goals
-
-The main objective of this project is to answer the following questions:
-
-- In which socioeconomic contexts do energy communities (CAIs) appear?
-- Is the presence of CAIs associated with specific renewable energy profiles?
-- Does inequality or income level influence the emergence of CAIs?
-- Are there differences between urban and rural territories?
-- Are there demographic or gender-related patterns linked to vulnerable contexts?
-
-The visualizations have been designed to **compare contexts** rather than absolute values,
-given the strong imbalance in the dataset.
+Spatial Analysis of Energy Communities and Vulnerability in Spain  
+Universidad de Deusto (2025)
 
 ---
 
-## 📊 Dashboard
+## Objetivo del dashboard
 
-The dashboard consists of **five coordinated visualizations**, arranged in a
-full-screen layout inspired by tools such as Power BI or Tableau:
-
-1. Distribution of municipalities with and without CAIs  
-2. Social Vulnerability Index (SVI): CAI vs non-CAI municipalities  
-3. Percentage of municipalities with CAIs by income level  
-4. Dominant renewable energy profile and CAI presence  
-5. Urban vs rural differences in the emergence of CAIs  
-
-The dashboard has been exported to **static HTML** to ensure public access without
-authentication.
-
-🔗 **Live version (GitHub Pages):**  
-👉 https://USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/
+El objetivo principal del dashboard es **analizar si el despliegue de Comunidades Energéticas en España está alineado con criterios de equidad social y transición energética justa**, explorando patrones espaciales, económicos y sociales a escala municipal y autonómica.
 
 ---
 
-## 🗂 Data
+## Preguntas de investigación
 
-The original dataset is:
+El dashboard está diseñado para responder de forma visual e interactiva a las siguientes preguntas:
 
-**Spatial Analysis of Energy Communities and Vulnerability in Spain**  
-Authors: Oleksandr Husiev, Marta Enciso-Santocildes, Olatz Ukar Arrien  
-Source: Mendeley Data  
-License: CC BY 4.0  
+1. ¿Cuál es la distribución territorial de las Comunidades Energéticas en España?
 
-> Note: The version published in this repository uses **simulated data**
-for demonstration purposes. The final academic submission uses the original dataset.
+2. ¿Qué porcentaje de municipios cuenta con al menos una Comunidad Energética?
+
+3. ¿Existen diferencias socioeconómicas entre municipios con y sin CAI?
+
+4. ¿Qué relación existe entre vulnerabilidad social y presencia de CAI?
+
+5. ¿Qué perfiles de energías renovables dominan en los municipios con CAI?
+
+6. ¿El despliegue actual de Comunidades Energéticas contribuye a una transición energética justa?
 
 ---
 
-## 🛠 Technologies used
+## Contenido del dashboard
 
-- Python 3
+El dashboard incluye los siguientes elementos visuales:
+
+- Mapa coroplético del número de CAI por Comunidad Autónoma.
+- Gráfico de cajas (boxplot) comparando la renta media de hogares en municipios con y sin CAI.
+- Indicadores clave sobre el número y porcentaje de municipios con y sin CAI.
+- Gráfico de dispersión que relaciona vulnerabilidad social y densidad poblacional.
+- Gráfico de barras sobre la distribución de perfiles renovables dominantes.
+
+---
+
+## Tecnologías utilizadas
+
+- Dash
 - Plotly
-- Dash (development and layout prototyping)
-- Pandas & NumPy
-- GitHub Pages (static publication)
 
 ---
 
-## 🚀 How to run locally
+## Estructura del proyecto
 
-1. Create a virtual environment (optional but recommended)
-2. Install dependencies:
+├── src/
+│ ├── app_dashboard.py
+│ ├── export_dashboard.py
+│ ├── index.html
+│ ├── LICENSE
+│ ├── README.md
+│ └── requirements.txt
 
-```bash
-pip install -r requirements.txt
+---
+
+## Fuente de datos
+
+Los datos utilizados proceden de:
+
+Spatial Analysis of Energy Communities and Vulnerability in Spain  
+Mendeley Data, V5  
+https://data.mendeley.com/datasets/v8cv52frdh/5
+
+---
+
+## Licencia
+
+Este proyecto se distribuye bajo la licencia **MIT License**.
+
+Se permite el uso, copia, modificación, fusión, publicación, distribución, sublicencia y/o venta del software, siempre que se incluya el aviso de copyright y la licencia original.
+
+Consulta el archivo LICENSE para más detalles.
