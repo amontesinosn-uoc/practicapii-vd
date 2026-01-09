@@ -2,6 +2,12 @@ import plotly.io as pio
 from app_dashboard import fig1, fig2, fig3, fig4, fig5, fig6
 
 def fig_html(fig):
+    fig.update_layout(
+        height=300,
+        width=450,
+        autosize=False,
+        margin=dict(l=40, r=20, t=45, b=40)
+    )
     return pio.to_html(
         fig,
         include_plotlyjs="cdn",
@@ -18,20 +24,27 @@ html = f"""
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {{
+html, body {{
+    height: 100%;
     margin: 0;
-    padding: 30px;
+}}
+
+body {{
     font-family: Arial, sans-serif;
     background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
 }}
 
 h1 {{
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
 }}
 
 .subtitle {{
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
 }}
 
 a {{
@@ -39,17 +52,21 @@ a {{
 }}
 
 .dashboard {{
+    height: calc(100vh - 150px);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
 }}
 
 .card {{
-    border-radius: 10px;
     background: #fafafa;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }}
 </style>
 </head>
@@ -59,8 +76,8 @@ a {{
 <h1>Spatial Analysis of Energy Communities and Vulnerability in Spain</h1>
 
 <div class="subtitle">
-    Husiyev, Oleksandr; Enciso-Santocildes, Marta; Ukar Arrien, Olatz (2025). 
-    “Spatial Analysis of Energy Communities and Vulnerability in Spain”, 
+    Husiyev, Oleksandr; Enciso-Santocildes, Marta; Ukar Arrien, Olatz (2025).
+    “Spatial Analysis of Energy Communities and Vulnerability in Spain”,
     Mendeley Data, V5, doi: 10.17632/v8cv52frdh.5<br>
     <a href="https://data.mendeley.com/datasets/v8cv52frdh/5" target="_blank">
         https://data.mendeley.com/datasets/v8cv52frdh/5

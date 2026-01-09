@@ -92,7 +92,7 @@ fig1 = px.choropleth_map(
     color_continuous_scale=CAI_CONTINUOUS_SCALE,
     map_style="carto-positron",
     center=dict(lat=40.0, lon=-3.7),
-    zoom=4,
+    zoom=3.7,
     opacity=0.9,
     labels={"num_cais": "Nº CAIs"},
     title="Número de CAIs por CCAA",
